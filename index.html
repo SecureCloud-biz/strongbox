@@ -34,7 +34,75 @@
         <h1>
 <a name="strongbox" class="anchor" href="#strongbox"><span class="octicon octicon-link"></span></a>Strongbox</h1>
 
-<p>Generate secured passwords from seeds.</p>
+<p>Generate secured passwords, based on a public and a private key.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ul>
+<li>Clone this repository in the wanted folder.</li>
+<li>If there's a subfolder in the URL used to access to Strongbox, you need to update <code>startto</code> value in <code>app.js</code>:
+
+<ul>
+<li>
+<code>var startto = 0;</code> for an URL without subfolder (ex. <code>http://strongbox.domain.tld/</code>)</li>
+<li>
+<code>var startto = 1;</code> for an URL with one subfolder (ex. <code>http://domain.tld/strongbox/</code>)</li>
+<li>
+<code>var startto = 2;</code> for an URL with two subfolder (ex. <code>http://domain.tld/security/strongbox/</code>)</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p></p><img src="assets/img/usage.png" alt="Usage">
+
+<p>Access to Strongbox page, adding a public key to your URL: </p>
+
+<pre><code>http://strongbox.domain.tld/publickey
+</code></pre>
+
+<p>Strongbox will ask you to enter a private key. Once this key is entered, Strongbox will use both keys to generate you a secured password.</p>
+
+<p>Please note that you can specify the password length desired, appending it to your URL:</p>
+
+<pre><code>http://strongbox.domain.tld/publickey/8
+</code></pre>
+
+<p><strong>A public/private keys couple will always outputs the same password.</strong> This means you can easily generate multiple passwords from a single one (which needs to be secured), using a service name as the public key. That said, you can use Strongbox the way you want!</p>
+
+<h2>
+<a name="legals" class="anchor" href="#legals"><span class="octicon octicon-link"></span></a>Legals</h2>
+
+<blockquote>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</p>
+</blockquote>
+
+<ul>
+<li>Author : <a href="https://github.com/zessx">zessx</a>
+</li>
+<li>Licence : <a href="http://opensource.org/licenses/MIT">MIT</a> </li>
+<li>Contact : <a href="https://twitter.com/zessx">@zessx</a>
+</li>
+<li>Link  : <a href="http://smarchal.com/strongbox">http://smarchal.com/strongbox</a>
+</li>
+</ul>
+
+<h2>
+<a name="donations" class="anchor" href="#donations"><span class="octicon octicon-link"></span></a>Donations</h2>
+
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=KTYWBM9HJMMSE&amp;lc=FR&amp;item_name=Buy%20a%20coffee%20to%20zessx%20%28Samuel%20Marchal%29&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abmac%3aNonHosted"><img src="http://doc.smarchal.com/bmac" alt="Buy me a coffee !"></a> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=KTYWBM9HJMMSE&amp;lc=FR&amp;item_name=Buy%20a%20tea%20to%20zessx%20%28Samuel%20Marchal%29&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abmac%3aNonHosted"><img src="http://doc.smarchal.com/bmat" alt="Buy me a tea !"></a></p>
+
+<h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>Remove folder dependency</li>
+<li>Add wget access</li>
+</ul>
       </section>
     </div>
 
